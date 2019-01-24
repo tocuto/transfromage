@@ -73,10 +73,10 @@ def XorCipher(packet, fingerprint):
 	global msg_keys
 	
 	stack = packet.stack
-	new_stack = b""
+	new_stack = []
 	
 	for index, byte in enumerate(stack):
 		fingerprint += 1
-		new_stack += (byte ^ msg_keys[fingerprint % 20]) & 255
+		new_stack.append((byte ^ msg_keys[fingerprint % 20]) & 255)
 	
-	return ByteArray(new_stack)
+	return ByteArray(bytes(new_stack))
