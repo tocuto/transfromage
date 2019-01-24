@@ -2,7 +2,6 @@ from .bytearray import ByteArray
 
 import base64
 import hashlib
-import ctypes
 
 salt = "".join(map(chr, [
 	247,  26, 166, 222, 143,  23, 118, 168,
@@ -13,7 +12,6 @@ salt = "".join(map(chr, [
 packet_keys = []
 identification_keys = []
 msg_keys = []
-encryptKeysList = {}
 
 def HashPassword(password):
 	global salt
@@ -21,30 +19,9 @@ def HashPassword(password):
 	
 	return base64.b64encode(hashlib.sha256(salted_hash.encode("ISO8859_1")).digest())
 
-def getEncryptedKeys(lettersKey,packetKeys):
-	cryptedKeys = encryptKeysList.get(lettersKey)
-	packetKeysLength = len(packetKeys)
-	calc_key = 5381
-	lettersLength = len(lettersKey)
-	if cryptedKeys == None:
-		for packetID in range(packetKeysLength):
-			calc_key = ctypes.c_int((calc_key << 5) + calc_key + (packetKeys[packetID]) + ord(lettersKey[packetID % len(lettersKey)])).value
-		cryptedKeys = []
-		for packetID in range(packetKeysLength):
-			calc_key ^= ctypes.c_int(calc_key << 13).value
-			calc_key ^= ctypes.c_int(calc_key >> 17).value
-			calc_key ^= ctypes.c_int(calc_key << 5).value
-			cryptedKeys.append(calc_key)
-		encryptKeysList[lettersKey] = cryptedKeys
-		return cryptedKeys
-	else:
-		return cryptedKeys
-
 def SetPacketKeys(keys):
 	global packet_keys, identification_keys, msg_keys
-	packet_keys = keys
-	identification_keys = getEncryptedKeys("identification", keys)
-	msg_keys = getEncryptedKeys("msg", keys)
+	packet_keys, identification_keys, msg_keys = keys
 
 def encode_chunks(v, n):
 	global identification_keys

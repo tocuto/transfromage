@@ -202,8 +202,10 @@ class Client(object):
 				self.game_version = result["version"]
 				self.game_connection_key = result["connection_key"]
 				self.game_auth_key = result["auth_key"]
-				self.game_packet_keys = result["packet_key"]
-				SetPacketKeys(self.game_packet_keys)
+				self.game_packet_keys = result["packet_keys"]
+				self.game_identification_keys = result["identification_keys"]
+				self.game_msg_keys = result["msg_keys"]
+				SetPacketKeys([self.game_packet_keys, self.game_identification_keys, self.game_msg_keys])
 			
 			else:
 				if result["internal_error_step"] == 2:
