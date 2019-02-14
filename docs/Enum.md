@@ -1,5 +1,5 @@
-# Enums
-### community <sub>\<str, int></sub>
+# Properties
+### enum.community <sub>\<str, int></sub>
 ###### The ID of each community.
 | Index | Value |
 | :-: | :-: |
