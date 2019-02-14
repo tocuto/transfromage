@@ -1,4 +1,4 @@
-#Methods
+# Methods
 >### room.\_\_init__( isPublic, name )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
@@ -39,7 +39,7 @@
 >| `Player`, `None` | The player if it is in the room, otherwise None |
 >
 ---
-#Properties
+# Properties
 >### room.players
 >A `dict` object with the players in the room
 >
