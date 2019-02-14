@@ -20,7 +20,7 @@
 >
 ---
 >### player.hasCheese
->Whether the player has a cheese or not. (`int`)
+>Whether the player has a cheese or not. (`bool`)
 >
 ---
 >### player.title
@@ -28,7 +28,7 @@
 >
 ---
 >### player.titleStars
->The player's title stars. (`int`)
+>The player's title stars quantity. (`int`)
 >
 ---
 >### player.gender
@@ -36,7 +36,7 @@
 >
 ---
 >### player.look
->The player's look. (`int`)
+>The player's look. (`str`)
 >
 ---
 >### player.mouseColor
