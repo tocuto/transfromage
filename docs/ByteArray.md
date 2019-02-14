@@ -2,7 +2,7 @@
 >All the "write" methods listed here return the ByteArray object, so a `packet.writeShort(5).writeShort(4)` must work.
 >
 ---
->### packet.__init__ ( stack )
+>### packet.\_\_init__ ( stack )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
 >| stack | `bytes` | ✕ | The packet stack if you need to load a packet from bytes. |
