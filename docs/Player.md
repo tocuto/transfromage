@@ -52,11 +52,11 @@
 >
 ---
 >### player.souris
->The player's name color. (`bool`)
+>Whether if the player is guest or not. (`bool`)
 >
 ---
 >### player.isVampire
->The player's name color. (`bool`)
+>Whether if the player is vampire or not. (`bool`)
 >
 ---
 >### player.hasWon
