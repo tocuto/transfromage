@@ -50,6 +50,15 @@
 >Triggered when the client changes the room.
 >
 ---
+>### on_map_change ( previous_map, new_map )
+>| Parameter | Type | Description |
+>| :-: | :-: | - |
+>| previous_map | `Map`, `None` | The previous room's map. |
+>| new_map | `Map` | The actual room's map. |
+>
+>Triggered when the room's map has been changed. Might be triggered when there is a room change too.
+>
+---
 >### on_room_message ( message )
 >| Parameter | Type | Description |
 >| :-: | :-: | - |
