@@ -1,10 +1,8 @@
 # Properties
-### enum.community <sub>\<str, int></sub>
+### enum.communities <sub>\<str, int></sub>
 ###### The ID of each community.
 | Index | Value |
 | :-: | :-: |
-| XX | -1 |
-| -1 | XX |
 | EN | 00 |
 | 00 | EN |
 | FR | 01 |
@@ -65,3 +63,72 @@
 | 30 | AZ |
 | PT | 31 |
 | 31 | PT |
+---
+### enum.cp_communities <sub>\<str, int></sub>
+###### The ID of each community in the community platform.
+| Index | Value |
+| :-: | :-: |
+| EN | 01 |
+| 01 | EN |
+| FR | 02 |
+| 02 | FR |
+| RU | 03 |
+| 03 | RU |
+| BR | 04 |
+| 04 | BR |
+| ES | 05 |
+| 05 | ES |
+| CN | 06 |
+| 06 | CN |
+| TR | 07 |
+| 07 | TR |
+| VK | 08 |
+| 08 | VK |
+| PL | 09 |
+| 09 | PL |
+| HU | 10 |
+| 10 | HU |
+| NL | 11 |
+| 11 | NL |
+| RO | 12 |
+| 12 | RO |
+| ID | 13 |
+| 13 | ID |
+| DE | 14 |
+| 14 | DE |
+| AR | 16 |
+| 16 | AR |
+| PH | 17 |
+| 17 | PH |
+| LT | 18 |
+| 18 | LT |
+| JP | 19 |
+| 19 | JP |
+| CH | 20 |
+| 20 | CH |
+| FI | 21 |
+| 21 | FI |
+| CZ | 22 |
+| 22 | CZ |
+| HR | 23 |
+| 23 | HR |
+| CZ | 24 |
+| 24 | CZ |
+| SK | 25 |
+| 25 | SK |
+| HR | 26 |
+| 26 | HR |
+| BG | 27 |
+| 27 | BG |
+| LV | 28 |
+| 28 | LV |
+| HE | 29 |
+| 29 | HE |
+| IT | 30 |
+| 30 | IT |
+| ET | 31 |
+| 31 | ET |
+| AZ | 32 |
+| 32 | AZ |
+| PT | 33 |
+| 33 | PT |
