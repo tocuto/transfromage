@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
 	name = 'transfromage',
 	packages = ['transfromage'],
-	version = '0.1',
+	version = '1.0',
 	license = 'MIT',
 	description = 'Client library for the Transformice game',
 	author = 'Tocutoeltuco - Turkitutu',
 	author_email = 'tocutoeltuco@gmail.com',
 	url = 'https://github.com/Tocutoeltuco/transfromage',
-	download_url = 'https://github.com/Tocutoeltuco/transfromage/archive/v_01.tar.gz',
+	download_url = 'https://github.com/Tocutoeltuco/transfromage/archive/v1_0.tar.gz',
 	keywords = ['TRANFORMICE', 'CLIENT', 'THREADING', 'ATELIER801', 'EVENT'],
 	install_requires=[],
 	classifiers=[
