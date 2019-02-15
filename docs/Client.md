@@ -49,6 +49,14 @@
 >Sends a whisper
 >
 ---
+>### client.sendCommand ( command )
+>| Parameter | Type | Required | Description |
+>| :-: | :-: | :-: | - |
+>| command | `str` | ✔ | The command |
+>
+>Sends a command
+>
+---
 >### client.sendCPPacket ( TC, packet, encrypt )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
