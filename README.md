@@ -30,7 +30,7 @@ To update the api all you need to do is run the same installation command.
 
 ### Contribution
 
-The best way to contribute for this API is ~~donating~~ creating pull requests with bug fixes and new events / methods (like joining the map editor, getting a map XML, loading Lua...)
+The best way to contribute for this API is creating pull requests with bug fixes and new events / methods (like joining the map editor, getting a map XML, loading Lua...)
 
 ## Base example
 
