@@ -12,7 +12,13 @@
 
 Join the **_[Fifty Shades of Lua](https://discord.gg/quch83R)_** [discord](https://discordapp.com/) to discuss about this API and to have special support.
 
-This API uses an endpoint that gives you access to the Transformice encryption keys. The API endpoint is [this one](https://api.tocu.tk/get_transformice_keys.php) and you need to request access to Tocutoeltuco (preferably via discord: Tocutoeltuco#0018) and explain your project.
+This API had many indirect contributors, including [@Bolodefchoco](https://github.com/Lautenschlager-id), [@Turkitutu](https://github.com/Turkitutu), [@Athesdrake](https://github.com/Athesdrake)
+
+## Keys Endpoint
+
+This API depends on an [endpoint](https://api.tocu.tk/get_transformice_keys.php) that gives you access to the Transformice encryption keys.
+
+To get access to it you need to request a token to Tocutoeltuco _(preferably via discord: Tocutoeltuco#0018)_ by explaining your project.
 
 ## Installation
 
