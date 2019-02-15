@@ -19,17 +19,21 @@ class ByteArray(object):
 		return self.writeByte((long >> 24) & 255, (long >> 16) & 255, (long >> 8) & 255, long & 255)
 	
 	def writeUTF(self, utf):
-		self.writeShort(len(utf))
-		
 		if type(utf) == str:
 			utf = utf.encode()
 		
+		self.writeShort(len(utf))
 		self.stack += utf
+		
 		return self
 	
 	def writeBigUTF(self, big_utf):
+		if type(big_utf) == str:
+			big_utf = big_utf.encode()
+		
 		self.writeInt(len(big_utf))
-		self.stack += utf.encode()
+		self.stack += big_utf
+		
 		return stack
 	
 	def writeBool(self, boolean):
