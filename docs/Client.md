@@ -62,7 +62,7 @@
 >| :-: | :-: | :-: | - |
 >| room_name | `str` | ✔ | The room name |
 >
->Request to join to room
+>Sends a request to the server to join a room.
 >
 ---
 >### client.sendCPPacket ( TC, packet, encrypt )
