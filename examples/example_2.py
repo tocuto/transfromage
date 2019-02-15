@@ -14,8 +14,7 @@ def on_logged():
 @client.event
 def on_room_message(message):
     if message.content == '!look':
-        player = client.room.get_player(message.author.name, "name")
-        client.sendRoomMessage(message.author.name+', '+player.look)
+        client.sendRoomMessage(message.author.name+', '+message.author.look)
 
 
 client.start('api-id', 'token') 
