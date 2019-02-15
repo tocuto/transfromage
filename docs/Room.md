@@ -59,3 +59,7 @@
 >### room.name
 >The room name (`str`)
 >
+---
+>### room.map
+>The room's actual map (`Map`, might be `None` sometimes)
+>
