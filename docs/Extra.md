@@ -6,7 +6,7 @@
 >
 ---
 # Functions
->### HashPassword
+>### HashPassword( password )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
 >| password | `string` | ✔ | The password to hash. |
@@ -14,7 +14,7 @@
 >Hashes a password with the transformice's hash algorithm
 >
 ---
->### BlockCipher
+>### BlockCipher( packet)
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
 >| packet | `ByteArray` | ✔ | The packet to cipher. |
@@ -22,7 +22,7 @@
 >Ciphers a packet with the XXTea algorithm
 >
 ---
->### XorCipher
+>### XorCipher( packet, fingerprint )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
 >| packet | `ByteArray` | ✔ | The packet to cipher. |
