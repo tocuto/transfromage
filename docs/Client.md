@@ -57,6 +57,14 @@
 >Sends a command
 >
 ---
+>### client.requestJoinRoom ( room_name )
+>| Parameter | Type | Required | Description |
+>| :-: | :-: | :-: | - |
+>| room_name | `str` | ✔ | The room name |
+>
+>Request to join a room
+>
+---
 >### client.sendCPPacket ( TC, packet, encrypt )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
