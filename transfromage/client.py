@@ -8,6 +8,7 @@ from json import loads
 
 import traceback
 import time
+import zlib
 
 class ApiEndpointException(Exception):
 	"""Main Exception for the api endpoint errors.
@@ -118,7 +119,7 @@ class Client(object):
 			name = packet.readUTF()
 			self.playingTime = packet.readLong()
 			self.connectionTime = time.time()
-			self.community = enum.communities[packet.readByte()]
+			self.community = packet.readByte()#enum.communities[packet.readByte()]
 			pcode = packet.readLong()
 			
 			self.player = new.info.Player(0, name, pcode)
@@ -263,7 +264,7 @@ class Client(object):
 			packet.readShort() # room players?
 			packet.readByte() # round code
 			packet.readShort() # ???
-			xml = packet.readUTF()
+			xml = zlib.decompress(packet.readByte(packet.readShort())).decode('utf-8')
 			author = packet.readUTF()
 			perm = packet.readByte()
 			isInverted = packet.readBool()
@@ -316,7 +317,7 @@ class Client(object):
 	def sendWhisper(self, player_name, message):
 		"""This is the function that sends a whisper to a player."""
 		
-		self.sendCPPacket(52, ByteArray().writeUTF(player_name).writeUTF(message), True)
+		self.sendCPPacket(52, ByteArray().writeUTF(player_name).writeUTF(message))
 
 	def sendCommand(self, command):
 		"""This is the function that sends a command."""
@@ -330,19 +331,19 @@ class Client(object):
 		packet.writeUTF(room_name).writeByte(0)
 		self.main.send([5, 38], packet)
 
-	def sendCPPacket(self, TC, packet, encrypt = False):
+	def sendCPPacket(self, TC, packet):
 		"""This is the function that sends a packet to the community platform."""
 		
 		self.community_platform_fingerprint = (self.community_platform_fingerprint % 0x100000000) + 1
 		_packet = ByteArray().writeShort(TC).writeLong(self.community_platform_fingerprint)
 		_packet.stack += packet.stack
 		
-		self.main.send([60, 3], XorCipher(_packet, self.main.packetID) if encrypt else _packet)
+		self.main.send([60, 3], XorCipher(_packet, self.main.packetID))
 
 	def setCommunity(self, name):
 		"""This is the function that sets the connection community id."""
 
-		communityID = enum.communities[name.upper()]
+		communityID = enum.communities.get(name.upper())
 		if communityID == None:
 			communityID = 0
 		community = ByteArray().writeByte(communityID).writeByte(0)
