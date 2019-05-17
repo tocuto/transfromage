@@ -21,7 +21,7 @@
 >### packet.writeShort ( short )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
->| short | `string` | ✔ | The name of the event. |
+>| short | `string` | ✔ | The short integer to write. |
 >
 >Writes a short integer (0 - 65535) in the packet. Can't be negative.
 >
@@ -29,7 +29,7 @@
 >### packet.writeInt ( integer )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
->| integer | `string` | ✔ | The name of the event. |
+>| integer | `string` | ✔ | The integer to write. |
 >
 >Writes an integer (0 - 16777215) in the packet. Can't be negative.
 >
@@ -37,7 +37,7 @@
 >### packet.writeLong ( long )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
->| long | `string` | ✔ | The name of the event. |
+>| long | `string` | ✔ | The long integer to write. |
 >
 >Writes a long integer (0 - 4294967295) in the packet. Can't be negative.
 >
@@ -45,7 +45,7 @@
 >### packet.writeUTF ( utf )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
->| utf | `str`, `bytes` | ✔ | The name of the event. |
+>| utf | `str`, `bytes` | ✔ | The string to write. |
 >
 >Writes a string in the packet. The max length is 65535.
 >
@@ -53,7 +53,7 @@
 >### packet.writeBigUTF ( big_utf )
 >| Parameter | Type | Required | Description |
 >| :-: | :-: | :-: | - |
->| big_utf | `str`, `bytes` | ✔ | The name of the event. |
+>| big_utf | `str`, `bytes` | ✔ | The big string to write. |
 >
 >Writes a big string in the packet. The max length is 16777215.
 >
