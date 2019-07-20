@@ -305,6 +305,7 @@ class Client(object):
 		packet = ByteArray().writeUTF(player).writeUTF(HashPassword(password))
 		packet.writeUTF("app:/TransformiceAIR.swf/[[DYNAMIC]]/2/[[DYNAMIC]]/4").writeUTF(start_room)
 		packet.writeLong(self.received_authkey ^ self.game_auth_key)
+		packet.writeByte(0).writeString("")
 		
 		self.main.send([26, 8], BlockCipher(packet).writeByte(0))
 	
