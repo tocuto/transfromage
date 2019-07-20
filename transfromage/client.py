@@ -460,7 +460,7 @@ class Client(object):
 		
 		self.get_keys(api_tfmid, api_token)
 		
-		self.main.connect("164.132.202.12", 5555)
+		self.main.connect("94.23.193.229", 11801)
 		
 		packet = ByteArray().writeShort(self.game_version).writeUTF(self.game_connection_key)
 		packet.writeUTF("Desktop").writeUTF("-").writeLong(8125).writeUTF("")
