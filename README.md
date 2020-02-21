@@ -1,3 +1,7 @@
+# Important
+
+This version of transfromage is discontinued and needs a patch to work with the new transformice protocol. That won't be applied. If you're using this version, you must switch to [aiotfm](https://github.com/Athesdrake/aiotfm).<br><br><br>
+
 <p align='center'><a href='https://atelier801.com/topic?f=5&t=917024'><img src="http://images.atelier801.com/168e7d7a07d.png" title="Fromage"></a></p>
 
 <sub><s>sh dont tell anyone but this is just an edit of [this](https://github.com/Lautenschlager-id/Transfromage/blob/master/README.md) readme</s></sub>
