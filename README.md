@@ -14,7 +14,7 @@ This version of transfromage is discontinued and needs a patch to work with the 
 
 **TransFromage API** is a [documented API](https://github.com/Tocutoeltuco/transfromage/tree/master/docs) that allows developers to make bots for the mentioned game.
 
-Join the **_[Fifty Shades of Lua](https://discord.gg/quch83R)_** [discord](https://discordapp.com/) to discuss about this API and to have special support.
+Join the **_[Fifty Shades of Lua](https://discord.gg/qmdryEB)_** [discord](https://discordapp.com/) to discuss about this API and to have special support.
 
 This API had many indirect contributors, including [@Lautenschlager-id](https://github.com/Lautenschlager-id), [@Turkitutu](https://github.com/Turkitutu) and [@Athesdrake](https://github.com/Athesdrake).
 
